@@ -1,9 +1,9 @@
 {
-	"name":"Hello PWA",
-	"short_name":"PWA",
+	"name":"CrazyCEO Time Zone",
+	"short_name":"Time Zone",
 	"start_url":"index.html",
 	"display":"standalone",
-	"background_color":"#5900b3",
+	"background_color":"#fff000",
 	"theme_color":"black",
 	"scope": ".",
 	"description":"First One",
