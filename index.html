@@ -20,11 +20,44 @@
         content="black">
  
   <!-- Manifest File link -->
-  <link rel="manifest"
-        href="manifest.json">
+  
 </head>
 
 
 <body><h1>Time ZOne</h1></body>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Current Time in USA, India, UAE</title>
+      <link rel="manifest"
+        href="manifest.json">
+  </head>
+  <body>
+    <h1>Current Time in USA, India, UAE</h1>
+    <ul>
+      <li>USA: <span id="usa-time"></span></li>
+      <li>India: <span id="india-time"></span></li>
+      <li>UAE: <span id="uae-time"></span></li>
+    </ul>
+    <script>
+      function updateTime() {
+        const usaTime = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
+        document.getElementById("usa-time").textContent = usaTime;
+        
+        const indiaTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Kolkata"});
+        document.getElementById("india-time").textContent = indiaTime;
+        
+        const uaeTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Dubai"});
+        document.getElementById("uae-time").textContent = uaeTime;
+      }
+      
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
+
 
 
