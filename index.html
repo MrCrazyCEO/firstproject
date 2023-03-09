@@ -1,0 +1,24 @@
+<h1>Time ZOne</h1>
+<script>
+// Get user's timezone
+const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+// Get current date and time in user's timezone
+const userDateTime = new Date().toLocaleString('en-US', { timeZone: userTimezone });
+
+// Get current date and time in USA (New York) timezone
+const usaDateTime = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+
+// Get current date and time in UK (London) timezone
+const ukDateTime = new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' });
+
+// Get current date and time in UAE (Dubai) timezone
+const uaeDateTime = new Date().toLocaleString('en-GB', { timeZone: 'Asia/Dubai' });
+
+// Display results in console
+console.log(`Your country: ${userTimezone}`);
+console.log(`Your time: ${userDateTime}`);
+console.log(`USA time: ${usaDateTime}`);
+console.log(`UK time: ${ukDateTime}`);
+console.log(`UAE time: ${uaeDateTime}`);
+</script>
